@@ -6,4 +6,4 @@ How to use:
   - open terminal
   - make: `git clone git://github.com/denisfl/thane.git`
   - `cd thane`
-  - run yeoman: `middleman server`
+  - run middleman: `middleman server`
