@@ -67,6 +67,10 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
+  # For non-minify html. Remove if don't use slim
+  set :slim, { pretty: true }
+
+
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
