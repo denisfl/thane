@@ -4,6 +4,6 @@ How to use:
 ---------------
   - install [http://middlemanapp.com](http://middlemanapp.com)
   - open terminal
-  - make: `git clone git://github.com/denisfl/thane.git`
+  - make: `git clone https://github.com/denisfl/thane.git`
   - `cd thane`
   - run middleman: `middleman server`
