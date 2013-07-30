@@ -6,4 +6,5 @@ How to use:
   - open terminal
   - make: `git clone https://github.com/denisfl/thane.git`
   - `cd thane`
+  - install gems: `bundle install`
   - run middleman: `middleman server`
