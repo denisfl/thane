@@ -1,14 +1,14 @@
-/* Will be compiled down to a single stylesheet with your sass files */
-
 @import "mixins";
 // CSS Reset
 @import "reset";
 @import "fonts";
 // Core variables and mixins
 @import "variables";
+@import "base";
 @import "type";
-
+@import "header";
 @import "content";
-
+@import "footer";
 // Utility classes
-@import "utilities"; // Has to be last to override when necessary
+// Has to be last to override when necessary
+@import "utilities";

@@ -7,7 +7,7 @@ $(function () {
     'use strict';
     App = {
         init: function () {
-
+        	this.cacheElements();
         },
         cacheElements: function () {
 

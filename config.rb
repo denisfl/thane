@@ -51,10 +51,16 @@ set :js_dir, 'js'
 
 set :images_dir, 'img'
 
-activate :directory_indexes
+set :slim, { pretty: true }
+
+# activate :directory_indexes
 
 # Build-specific configuration
 configure :build do
+  # Automatically add vendor prefixes to CSS rules
+  # install gem 'middleman-autoprefixer'
+  # activate :autoprefixer
+
   # For example, change the Compass output style for deployment
   activate :minify_css
 
@@ -67,10 +73,56 @@ configure :build do
   # Use relative URLs
   activate :relative_assets
 
+  # Compress and optimise images
+  activate :image_optim
+
+  # Compress PNGs after build
+  # First: gem install middleman-smusher
+  #require "middleman-smusher"
+  #activate :smusher
+
+  # activate :gzip
+
   # For non-minify html. Remove if don't use slim
   set :slim, { pretty: true }
 
 
   # Or use a different image path
   # set :http_path, "/Content/images/"
+end
+
+activate :deploy do |deploy|
+  # https://github.com/tvaughan/middleman-deploy
+  # deploy.build_before = true # default: false
+
+  # Git
+  # deploy.method = :git
+  # Optional Settings
+  # deploy.remote = "custom-remote" # remote name or git url, default: origin
+  # deploy.branch = "custom-branch" # default: gh-pages
+
+  # FTP
+  # deploy.method   = :ftp
+  # deploy.host     = "ftp.example.com"
+  # deploy.path     = "/srv/www/site"
+  # deploy.user     = "tvaughan"
+  # deploy.password = "secret"
+
+  # SFTP 
+  # deploy.method   = :sftp
+  # deploy.host     = "sftp.example.com"
+  # deploy.path     = "/srv/www/site"
+  # Optional Settings
+  # deploy.user     = "tvaughan" # no default
+  # deploy.password = "secret" # no default
+
+  # rsync
+  # deploy.method = :rsync
+  # deploy.host   = "www.example.com"
+  # deploy.path   = "/srv/www/site"
+  # Optional Settings
+  # deploy.user  = "tvaughan" # no default
+  # deploy.port  = 5309 # ssh port, default: 22
+  # deploy.clean = true # remove orphaned files on remote host, default: false
+
 end

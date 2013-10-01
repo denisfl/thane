@@ -1,0 +1,17 @@
+// Reset the box-sizing
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+// Body reset
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+// Images
+img {
+  vertical-align: middle;
+}
