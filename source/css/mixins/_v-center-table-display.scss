@@ -1,0 +1,17 @@
+@mixin vcenter-table (
+$inner: ".inner"
+) {
+
+  display: table;
+
+  & > #{$inner} {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+}
+
+
+%vcenter-table {
+  @include vcenter-table;
+}

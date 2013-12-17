@@ -45,10 +45,7 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
-// Focus states
-a:focus {
-  @include tab-focus();
-}
+
 // Hover & Active
 a:hover,
 a:active {
@@ -117,9 +114,7 @@ input[type="submit"] {
   -webkit-appearance: button; // Style clickable inputs in iOS
 }
 input[type="search"] { // Appearance in Safari/Chrome
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;
+  @include box-sizing(border-box);
   -webkit-appearance: textfield;
 }
 input[type="search"]::-webkit-search-decoration,

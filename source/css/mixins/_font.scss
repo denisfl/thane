@@ -1,0 +1,43 @@
+// FONTS
+// --------------------------------------------------
+
+@mixin font-family-serif() {
+  font-family: $serifFontFamily;
+}
+@mixin font-family-sans-serif() {
+  font-family: $sansFontFamily;
+}
+@mixin font-family-monospace() {
+  font-family: $monoFontFamily;
+}
+@mixin font-shorthand($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
+@mixin font-serif($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight) {
+  @include font-family-serif();
+  @include font-shorthand($size, $weight, $lineHeight);
+}
+@mixin font-sans-serif($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight) {
+  @include font-family-sans-serif();
+  @include font-shorthand($size, $weight, $lineHeight);
+}
+@mixin font-monospace($size: $baseFontSize, $weight: normal, $lineHeight: $baseLineHeight) {
+  @include font-family-monospace();
+  @include font-shorthand($size, $weight, $lineHeight);
+}
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal ) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style:  $style;
+
+    src: url('#{$file-path}.eot');
+    src: url('#{$file-path}.eot?#iefix')          format('embedded-opentype'),
+    url('#{$file-path}.woff')                     format('woff'),
+    url('#{$file-path}.ttf')                      format('truetype'),
+    url('#{$file-path}.svg##{$font-family}')      format('svg');
+  }
+}

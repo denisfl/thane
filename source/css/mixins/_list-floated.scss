@@ -1,0 +1,23 @@
+@mixin list-floated (
+$space: false,
+$dir: left
+) {
+
+  @include list-unstyled;
+  @include clearfix;
+
+  & > li {
+    float: $dir;
+  }
+
+  @if $space {
+    & > li + li {
+      margin-#{$dir}: $space;
+    }
+  }
+
+}
+
+%list-floated {
+  @include list-floated;
+}

@@ -2,44 +2,24 @@
 // Utility classes
 // --------------------------------------------------
 
-
 // Quick floats
-.pull-right {
-  float: right;
-}
-.pull-left {
-  float: left;
-}
+.b--right {float: right;}
+.b--left  {float: left;}
+
+// Text align
+.ta--left   {text-align: left;}
+.ta--right  {text-align: right;}
+.ta--center {text-align: center;}
 
 // Toggling content
-.hide {
-  display: none;
-}
-.show {
-  display: block;
-}
+.hide {display: none;}
+.show {display: block;}
 
 // Visibility
-.invisible {
-  visibility: hidden;
-}
-
-// For Affix plugin
-.affix {
-  position: fixed;
-}
+.invisible {visibility: hidden;}
 
 // Clearing floats
 .clearfix {
   @include clearfix();
 }
 
-// Accessible yet invisible text
-.hide-text {
-  @include hide-text();
-}
-
-// Uses box-sizing mixin, so must be defined here
-.input-block-level {
-  @include input-block-level();
-}

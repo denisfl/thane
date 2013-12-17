@@ -1,14 +1,11 @@
-@import "mixins";
-// CSS Reset
-@import "reset";
-@import "fonts";
-// Core variables and mixins
-@import "variables";
-@import "base";
-@import "type";
-@import "header";
-@import "content";
-@import "footer";
-// Utility classes
-// Has to be last to override when necessary
-@import "utilities";
+@import
+        "mixins",
+        "reset",
+        "fonts",
+        "variables",
+        "base",
+        "type",
+        "header",
+        "content",
+        "footer",
+        "utilities";

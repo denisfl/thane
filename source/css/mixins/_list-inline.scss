@@ -1,0 +1,21 @@
+@mixin list-inline (
+$space: false
+) {
+
+  @include list-unstyled;
+
+  & > li {
+    display: inline-block;
+  }
+
+  @if $space {
+    & > li + li {
+      margin-left: $space;
+    }
+  }
+
+}
+
+%list-inline {
+  @include list-inline;
+}

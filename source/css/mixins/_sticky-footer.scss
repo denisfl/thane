@@ -1,0 +1,25 @@
+@mixin sticky-footer (
+$height,
+$wrapper: ".wrapper",
+$footer: ".sticky"
+) {
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  #{$wrapper} {
+    min-height: 100%;
+    margin-bottom: -$height;
+    &:after {
+      content: "";
+      display: block;
+    }
+  }
+  #{$wrapper}:after,
+  #{$footer} {
+    height: $height;
+  }
+
+}

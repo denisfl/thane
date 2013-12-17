@@ -1,0 +1,17 @@
+@mixin reset-button {
+  // Reset default button styles, which are never used.
+  .btn {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: inline-block;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    outline: none;
+    -webkit-appearance: none;
+    -webkit-font-smoothing: antialiased;
+    @include user-select(none);
+  }
+}
