@@ -1,4 +1,4 @@
-This is Thane, tempplate based on the HTML5 Boilerplate, Bootstrap and Middleman.
+This is Thane, template based on the HTML5 Boilerplate, Bootstrap and Middleman.
 
 How to use:
 ---------------
