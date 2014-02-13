@@ -1,17 +1,30 @@
 doctype 5
-/[if IE 7]<html class="no-js ie7" lang="en">
-/[if IE 8]<html class="no-js ie8" lang="en">
-/[if (gte IE 9)|!(IE)]<!--><html class="no-js" lang="ru">
-html
-    head
-        meta charset="utf-8"            
-        title = current_page.data.title || "Static site generator"
-        meta name="description" content=""
-        meta name="viewport" content="width=device-width"
+/[if IE 7]
+  | <html class="ie ie7 lt-ie9 lt-ie8" lang="#{data.site.lang}">
+/[if IE 8]
+  | <html class="ie ie8 lt-ie9" lang="#{data.site.lang}">
+/[if IE 9]
+  | <html class="ie ie9" lang="#{data.site.lang}">
+| <!--[if (gte IE 9)|!(IE)]<!-->
+html lang="#{data.site.lang}"
+  | <!--<![endif]-->
+  head
+    meta charset="utf-8"            
+    title #{current_page.data.title} &mdash; #{data.site.title}
+    meta name="description" content="#{yield_content(:description).blank? ? data.site.description : yield_content(:description)}"
+    meta name="keywords" content="#{yield_content(:keywords).blank? ? data.site.keywords.join(', ') : yield_content(:keywords).join(', ')}"
 
-        = stylesheet_link_tag "main"
-        = javascript_include_tag  "vendor/modernizr.min.js"
-    body
-        = yield
+    meta name="viewport" content="width=device-width"
+    meta name="apple-mobile-web-app-capable" content="yes"
+    meta name="apple-mobile-web-app-status-bar-style" content="black"
 
-        = javascript_include_tag  "main.js"
+    = stylesheet_link_tag "application"
+    = javascript_include_tag  "vendor/modernizr.min.js"
+  body
+    = yield
+
+    = javascript_include_tag  "application.js"
+    
+    / Google Analytics
+    /= partial "layouts/partials/google_analytics_code"
+    

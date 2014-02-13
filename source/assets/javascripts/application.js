@@ -1,5 +1,5 @@
-//= require vendor/jquery.min.js
-//= require plugins.js
+//= require jquery
+
 
 var App;
 

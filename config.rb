@@ -37,6 +37,7 @@
 
 # Reload the browser automatically whenever files change
 activate :livereload
+activate :autoprefixer
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -45,11 +46,10 @@ activate :livereload
 #   end
 # end
 
-set :css_dir, 'css'
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
 
-set :js_dir, 'js'
-
-set :images_dir, 'img'
 
 set :slim, { pretty: true }
 
@@ -74,7 +74,7 @@ configure :build do
   activate :relative_assets
 
   # Compress and optimise images
-  activate :image_optim
+  # activate :image_optim
 
   # Compress PNGs after build
   # First: gem install middleman-smusher

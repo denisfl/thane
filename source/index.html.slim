@@ -1,9 +1,37 @@
 ---
-title:  This is Thane
+title:  Title Page
 ---
 
 = partial "layouts/partials/header"
+
+css:
+  .container {
+    margin: 0 auto;
+    width: 700px;
+    padding-top: 3em;
+    text-align: center;
+    color: #737373;
+  }
+  h1 {
+    margin-bottom: 30px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  p {
+    font-size: 1.4em;
+  }
+
+  .sitemap-list {
+    width: 300px;
+    text-align: left;
+    margin: 0 auto;
+  }
+
 section.container#id
   h1 Hello world! 
-  p This is Thane, a feature based on the HTML5 Boilerplate, Bootsrap and Middleman.
+  p This is Thane, template based on the HTML5 Boilerplate and Middleman.
+  hr
+  ul.sitemap-list
+    - data.sitemap.resources.each do |page|
+      li: a href="#{page.url}" #{page.title}
+
 = partial "layouts/partials/footer"

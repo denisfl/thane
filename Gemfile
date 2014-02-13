@@ -4,12 +4,17 @@ source 'http://rubygems.org'
 
 gem "middleman", "~>3.1.3"
 gem "slim"
-
+gem "jquery-middleman"
 gem 'therubyracer' # faster JS compiles
+gem "middleman-sprockets"
+
+# font-awesome icons
+# gem 'font-awesome-sass', :git => 'https://github.com/jasl/font-awesome-sass.git', :branch => 'remove-depend-sass-rails'
+
 
 # Compress and optimise images
 # https://github.com/plasticine/middleman-imageoptim
-gem "middleman-imageoptim", "~> 0.0.4"
+# gem "middleman-imageoptim", "~> 0.0.4"
 # Compress PNGs after build
 # gem install middleman-smusher
 
@@ -20,7 +25,7 @@ gem "middleman-deploy"
 
 # Automatically add vendor prefixes to CSS rules in the stylesheets served in your Middleman project using values from Can I Use.
 # https://github.com/porada/middleman-autoprefixer
-# gem 'middleman-autoprefixer'
+gem 'middleman-autoprefixer'
 
 # For faster file watcher updates:
 # gem "wdm", "~> 0.1.0") # Windows
