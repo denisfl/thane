@@ -6,7 +6,7 @@
 
 > *Through the Looking Glass, Lewis Carroll*
 
-Thane - is a [Middleman](http://middlemanapp.com) template, based on [HTML5 Boilerplate](http://html5boilerplate.com). It also contains some [Bootstrap](htp://getbootstrap.com) styles.
+Thane — is a [Middleman](http://middlemanapp.com) template, based on [HTML5 Boilerplate](http://html5boilerplate.com). It also contains some [Bootstrap](htp://getbootstrap.com) styles.
 
 Thane is intended as a fast and easy way to initiate the process of web-development . 
 
