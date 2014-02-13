@@ -26,5 +26,6 @@ html lang="#{data.site.lang}"
     = javascript_include_tag  "application.js"
     
     / Google Analytics
-    /= partial "layouts/partials/google_analytics_code"
+    - unless data.site.google_analytics_id.blank?
+      = partial "layouts/partials/google_analytics_code"
     
