@@ -1,6 +1,5 @@
 //= require jquery
 
-
 var App;
 
 $(function () {
