@@ -18,8 +18,8 @@ The project uses a rails-like assets pipeline:
 
 If you are using Middleman for layout design and prototyping, and are planning to move your project to Ruby on Rails, all you will need to do is copy the assets folder.
 
-*In order to prevent any problems while moving the project it is important to remember to use image-path('') for your CSS stylesheets: 
-`background: image-path('image_name.jpg')`.*
+*In order to prevent any problems while moving the project it is important to remember to use image-url('') for your CSS stylesheets: 
+`background: image-url('image_name.jpg')`.*
 
 ###Hot to start:
 
