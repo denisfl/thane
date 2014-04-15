@@ -1,0 +1,53 @@
+$paginationTextColor: $gray;
+$paginationTextColorActive: $black;
+$paginationLinkColor: $linkColor;
+$paginationLinkColorHover: $linkColorHover;
+
+.pagination {
+  @extend .clearfix;
+}
+
+  .pagination__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+    .pagination__item {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+
+      > span {
+        color: $paginationTextColor;
+      }
+
+      &.pagination__item--active {
+        > span {
+          color: $paginationTextColorActive;
+        }
+      }
+    }
+
+      .pagination__link {
+        display: block;
+        color: $paginationLinkColor;
+        text-decoration: none;
+
+        &:hover {
+          color: $paginationLinkColorHover;
+          text-decoration: none;
+        }
+      }
+
+// -----------------------------------------
+// Pager
+// ← Prev | Next →
+// -----------------------------------------
+
+.pagination__item--previous {
+  @extend .b--left;
+}
+
+.pagination__item--next {
+  @extend .b--right;
+}

@@ -1,0 +1,136 @@
+h3 Вертикальная форма
+/ .form - общий тэг формы
+  .form--vertical - модификатор, обозначающий что форма вертикальная,
+  т.е. все элементы идут в столбик
+form.form.form--vertical
+  .form__group
+    label.form__label for="exampleInputEmail1" Email address
+    .form__column
+      input.form__control type="email" id="exampleInputEmail1" placeholder="Enter email"
+
+  .form__group
+    label.form__label for="exampleInputPsw" Password
+    .form__column
+      input.form__control type="password" class="form-control" id="exampleInputPsw" placeholder="Enter password"
+
+  / При возникновении ошибки к .form__group
+    добавляется класс .form__group--has-error
+  .form__group.form__group--has-error
+    label.form__label for="exampleInputError" Field with error
+    .form__column
+      input.form__control type="text" class="form-control" id="exampleInputError" placeholder=""
+      / Может отображаться так же и подсказка
+        Подсказка может быть не только у полей с ошибками, но и у всех других
+      span.form__hint field with error
+
+  .form__group
+    label.form__label for="exampleText" Text
+    .form__column
+      textarea.form__control id="exampleText"
+
+  .form__group
+    label.form__label for="exampleInputD" Disabled
+    .form__column
+      input.form__control type="text" id="exampleInputD" placeholder="Disabled field" disabled="disabled"
+
+
+  .form__group
+    label.form__label for="exampleSelect" Select
+    .form__column
+      select.form__select id="exampleSelect"
+        option 1
+        option 2
+        option 3
+        option 4
+        option 5
+        option 6
+        option 7
+
+  / Блок с чекбоксом
+  .form__group
+    .form__column
+      .form__checkbox
+        input type="checkbox" id="exampleInputCheckbox"
+        label for="exampleInputCheckbox" Check me out
+
+  / Чекбоксы могу располагаться в линию
+    Тогда к .form__group добавляется .form__group--inline
+    (аналогично и с radio)
+  .form__group.form__group--inline
+    .form__column
+      .form__checkbox
+        input type="checkbox" id="exampleInputCheckboxI1"
+        label for="exampleInputCheckboxI1" 1
+      .form__checkbox
+        input type="checkbox" id="exampleInputCheckboxI2"
+        label for="exampleInputCheckboxI2" 2
+      .form__checkbox
+        input type="checkbox" id="exampleInputCheckboxI3"
+        label for="exampleInputCheckboxI3" 3
+
+  .form__group
+    .form__column
+      .form__radio
+        input type="radio" id="exampleInputRadio1" name="optionsRadios"
+        label for="exampleInputRadio1" Option one is this and that — be sure to include why it's great
+      .form__radio
+        input type="radio" id="exampleInputRadio2" name="optionsRadios"
+        label for="exampleInputRadio2" Option two can be something else and selecting it will deselect option one
+
+  .form__group.form__group--inline
+    .form__column
+      .form__radio
+        input type="radio" id="exampleInputRadioI1" name="optionsRadiosI"
+        label for="exampleInputRadioI1" 1
+      .form__radio
+        input type="radio" id="exampleInputRadioI2" name="optionsRadiosI"
+        label for="exampleInputRadioI2" 2
+
+  / Кнопка "отправить" заключается в .form__action
+    В этом блоке может быть несколько кнопок
+  .form__action
+    button type="submit" Submit
+
+
+h3 Инлайн форма
+/ .form--inline - модификатор инлайновой формы, когда все элементы идут в строку
+form.form.form--inline
+  / Для инлайновой формы блок .form__column отсутствует
+  .form__group
+    label.form__label for="exampleInputEmail1" Email address
+    input.form__control type="email" id="exampleInputEmail1" placeholder="Enter email"
+  .form__group
+    label.form__label for="exampleInputPsw" Password
+    input.form__control type="password" class="form-control" id="exampleInputPsw" placeholder="Enter password"
+  .form__group
+    .form__checkbox
+      input type="checkbox" id="exampleInputCheckboxInl"
+      label for="exampleInputCheckboxInl" Check me out
+  .form__action
+    button type="submit" Submit
+
+h3 Горизонтальная форма
+/ .form--horizontal - модификатор горизонтальной формы,
+  label располагается слева от блока с input
+form.form.form--horizontal
+  .form__group
+    label.form__label for="exampleInputEmail1" Email address
+    .form__column
+      input.form__control type="email" id="exampleInputEmail1" placeholder="Enter email"
+  .form__group
+    label.form__label for="exampleInputPsw" Password
+    .form__column
+      input.form__control type="password" class="form-control" id="exampleInputPsw" placeholder="Enter password"
+  .form__group
+    .form__checkbox
+      input.form__checkbox type="checkbox" id="exampleInputCheckbox2"
+      label for="exampleInputCheckbox2" Check me out
+  .form__group
+    .form__radio
+      input type="radio" id="exampleInputRadio3" name="optionsRadios"
+      label for="exampleInputRadio3" Option one is this and that — be sure to include why it's great
+    .form__radio
+      input type="radio" id="exampleInputRadio4" name="optionsRadios"
+      label for="exampleInputRadio4" Option two can be something else and selecting it will deselect option one
+  .form__action
+    button type="submit" Submit

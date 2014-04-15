@@ -1,0 +1,121 @@
+$formLabelWidth: 150px;
+$formErrorColor: #77030b;
+
+.form {}
+//.form--vertical
+//.form--horizontal
+//.form--inline
+
+.form__group,
+.form__action {
+  @extend .clearfix;
+
+  margin-bottom: 5px;
+
+  .form--inline & {
+    display: inline-block;
+    margin-bottom: 0;
+    width: auto;
+    vertical-align: middle;
+  }
+}
+
+.form__action {
+  .form--horizontal & {
+    margin-left: $formLabelWidth;
+  }
+}
+
+.form__label {
+  display: inline-block;
+
+  .form--horizontal & {
+    float: left;
+    padding-top: 7px;
+    padding-right: 7px;
+    width: $formLabelWidth;
+    text-align: right;
+  }
+}
+.form__control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+
+  &:focus {
+    outline: none;
+  }
+
+  .form--inline & {
+    display: inline-block;
+    width: auto;
+  }
+
+  .form__group--has-error & {
+    border-color: $formErrorColor;
+  }
+}
+
+textarea.form__control {
+  resize: vertical;
+}
+
+.form__control[disabled],
+.form__control[readonly],
+fieldset[disabled] .form__control {
+  cursor: not-allowed;
+  background-color: #eee;
+  opacity: 1;
+}
+
+
+.form__column {
+  .form--inline & {
+
+  }
+  .form--horizontal & {
+
+  }
+  .form--horizontal & {
+    float: left;
+  }
+}
+
+.form__checkbox,
+.form__radio {
+  > input[type=radio],
+  > input[type=checkbox] {
+    margin: -3px 5px 0 0;
+    display: inline-block;
+  }
+
+  > label {
+    display: inline-block;
+  }
+
+  .form--horizontal & {
+    margin-left: $formLabelWidth;
+  }
+
+  .form__group--inline & {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.form__hint {
+  .form__group--has-error & {
+    color: $formErrorColor;
+  }
+}
+
+
