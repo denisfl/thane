@@ -1,4 +1,5 @@
 //= require jquery
+//= require lib/modal
 
 var App;
 

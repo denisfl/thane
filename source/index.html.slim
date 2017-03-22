@@ -34,4 +34,8 @@ section.container#id
     - data.sitemap.resources.each do |page|
       li: a href="#{page.url}" #{page.title}
 
+  p
+    a href="#" data-toggle="modal" data-target="#modal" Show modal
+
 = partial "layouts/partials/footer"
+= partial "layouts/partials/modal"
