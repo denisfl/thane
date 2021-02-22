@@ -9,7 +9,7 @@
 
 // Grays
 // -------------------------
-$black:                 #000 !default;
+$black:                 #ccc !default;
 $grayDarker:            #272727 !default;
 $grayDark:              #333 !default;
 $gray:                  #666 !default;
@@ -37,7 +37,7 @@ $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !defau
 
 $baseFontSize:          14px !default;
 $baseFontFamily:        $sansFontFamily !default;
-$baseLineHeight:        20px !default;
+$baseLineHeight:        28px !default;
 $altFontFamily:         $serifFontFamily !default;
 
 $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily

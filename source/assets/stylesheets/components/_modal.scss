@@ -1,0 +1,44 @@
+$modal: modal;
+$modalWidth: 640px;
+$modalTopPosition: 30px;
+$modalBackdropBG: rgba(0,0,0,.6);
+$modalBG: $white;
+
+.#{$modal} {
+  display: none;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+  background-color: $modalBackdropBG;
+}
+// Добавляется к активному модальному окну
+.#{$modal}--is-active {
+  display:block;
+  visibility: visible;
+}
+// Добавляется к body для того, чтобы убрать скролл
+.#{$modal}--is-open {overflow: hidden;}
+
+  .#{modal}__dialog {
+    position: relative;
+    margin: $modalTopPosition auto;
+    width: $modalWidth;
+    background-color: $white;
+  }
+
+    .#{$modal}__header {
+     padding: 20px;
+    }
+      .#{$modal}__btn-close {
+
+      }
+    .#{$modal}__content {
+      padding: 20px;
+    }
